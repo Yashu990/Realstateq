@@ -21,24 +21,25 @@ const Footer = () => (
       <div className="text-left">
         <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-10 text-brand-gold">Navigation</h4>
         <ul className="space-y-6 text-xs font-bold text-white/60 tracking-widest">
-          <li><Link to="/properties" className="hover:text-white transition-colors uppercase">Inventory Hub</Link></li>
-          <li><Link to="/membership" className="hover:text-white transition-colors uppercase">Admission Protocol</Link></li>
-          <li><Link to="/about" className="hover:text-white transition-colors uppercase">Private Bank</Link></li>
+          <li><Link to="/#platform" className="hover:text-white transition-colors uppercase">Platform Model</Link></li>
+          <li><Link to="/about" className="hover:text-white transition-colors uppercase">About Us</Link></li>
+          <li><Link to="/services" className="hover:text-white transition-colors uppercase">Services</Link></li>
+          <li><Link to="/membership" className="hover:text-white transition-colors uppercase">Membership</Link></li>
         </ul>
       </div>
       
       <div className="text-left">
-        <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-10 text-brand-gold">Institutional</h4>
+        <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-10 text-brand-gold">Support</h4>
         <ul className="space-y-6 text-xs font-bold text-white/60 tracking-widest">
-          <li><Link to="/faq" className="hover:text-white transition-colors uppercase">Legal Warrants</Link></li>
-          <li><a href="#" className="hover:text-white transition-colors uppercase">Mandate Policy</a></li>
-          <li><a href="#" className="hover:text-white transition-colors uppercase">Data Sovereignty</a></li>
+          <li><Link to="/faq" className="hover:text-white transition-colors uppercase">Detailed FAQ</Link></li>
+          <li><Link to="/email-templates" className="hover:text-white transition-colors uppercase">Email Templates</Link></li>
+          <li><Link to="/#contact" className="hover:text-white transition-colors uppercase">Contact Us</Link></li>
         </ul>
       </div>
     </div>
     
     <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-       <p className="text-[10px] text-white/20 font-bold tracking-[0.3em] uppercase">© {new Date().getFullYear()} PremiumLand Auctions. All Rights Reserved.</p>
+       <p className="text-[10px] text-white/20 font-bold tracking-[0.3em] uppercase">(c) {new Date().getFullYear()} PremiumLand Auctions. All Rights Reserved.</p>
        <div className="flex gap-12 text-[9px] font-bold tracking-[0.4em] text-white/10 uppercase">
           <a href="#" className="hover:text-white transition-colors">Privacy Protocol</a>
           <a href="#" className="hover:text-white transition-colors">Digital Cookies</a>

@@ -27,6 +27,12 @@ import prop1 from '../assets/prop1.png';
 import prop2 from '../assets/prop2.png';
 import prop3 from '../assets/prop3.png';
 
+// New Asset Imports (Temporary placeholders until user runs copy_images.bat)
+import institutionalImg from '../assets/prop1.png';
+import analyticsImg from '../assets/prop2.png';
+import infrastructureImg from '../assets/prop3.png';
+import legalMainImg from '../assets/about-img.png';
+
 const heroImages = [hero1, hero2, hero3, hero4];
 
 const Hero = () => {
@@ -52,7 +58,7 @@ const Hero = () => {
             transition={{ duration: 1.5 }}
             className="absolute inset-0"
           >
-            <div className="absolute inset-0 bg-brand-navy/30 z-10"></div>
+            <div className="absolute inset-0 bg-brand-navy/10 z-10"></div>
             <img 
               src={heroImages[current]} 
               className="w-full h-full object-cover" 
@@ -72,12 +78,12 @@ const Hero = () => {
              <Gem size={14} className="text-brand-gold" />
              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Invitation-Only Platform</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.15] tracking-tight">
-             Access India's 1000+ Premium NLCT Properties at 20-50% Below Market Value
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-10 leading-[0.9] tracking-tighter uppercase">
+             Access India <br />One Thousand <span className="text-brand-gold">Plus</span> Premium <br />NLCT Assets.
           </h1>
           
-          <p className="text-base md:text-lg lg:text-xl font-medium text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-             Join our exclusive network connecting serious buyers with verified sellers. Your membership fee is fully refundable when you purchase your first property.
+          <p className="text-base md:text-lg lg:text-xl font-medium text-zinc-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+             Join our exclusive network connecting serious buyers with verified judicial assets Discover properties twenty to fifty percent below market valuation
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -93,9 +99,12 @@ const Hero = () => {
 };
 
 const StatsBanner = () => (
-  <section className="relative py-20 bg-brand-navy overflow-hidden">
-    <div className="absolute inset-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-fixed"></div>
-    <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/60 via-transparent to-transparent"></div>
+  <section className="relative py-24 bg-[#0a1128] overflow-hidden">
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-fixed opacity-80"
+      style={{ backgroundImage: `url(${hero2})` }}
+    ></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-[#0a1128]/80 via-[#0a1128]/40 to-transparent"></div>
     
     <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 text-center lg:text-left">
        <span className="text-brand-gold text-[10px] font-black uppercase tracking-[0.4em] mb-4 block">Why Partner With Us?</span>
@@ -103,9 +112,9 @@ const StatsBanner = () => (
        
        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl">
           {[
-            { v: "1000+", l: "Properties Curated" },
-            { v: "15+", l: "Years Elevating Real Estate" },
-            { v: "₹5,000Cr+", l: "Value Managed" }
+            { v: "1000 plus", l: "Properties Curated" },
+            { v: "15 plus", l: "Years Elevating Real Estate" },
+            { v: "INR 5000 Crores plus", l: "Value Managed" }
           ].map((s, i) => (
             <div key={i} className="flex flex-col gap-2">
                <span className="text-5xl font-black text-white">{s.v}</span>
@@ -128,7 +137,7 @@ const PropertySolutions = () => {
     <section className="py-24 bg-white border-b border-zinc-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
         <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">Complete Real Estate Solutions in Gurgaon</span>
-        <h2 className="text-4xl lg:text-5xl font-bold text-brand-navy mb-16 leading-tight">Residential, Commercial &<br/> Investment Property Solutions</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold text-brand-navy mb-16 leading-tight">Residential Commercial and<br/> Investment Property Solutions</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {solutions.map((s, i) => (
@@ -151,28 +160,28 @@ const PlatformDifferentiation = () => {
     {
       t: "Institutional Access",
       d: "Direct pipeline to bank-REO inventories and distressed land blocks before they hit public aggregators.",
-      img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop",
+      img: institutionalImg,
       icon: <ShieldCheck size={24} />,
       color: "gold"
     },
     {
       t: "Predictive Analytics",
-      d: "Proprietary heat-maps identifying high-yield corridors in Gurgaon and NCR with 15-20% projected uplift.",
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      d: "Proprietary heat maps identifying high yield corridors in Gurgaon and NCR with 15 to 20 percent projected uplift.",
+      img: analyticsImg,
       icon: <TrendingUp size={24} />,
       color: "teal"
     },
     {
       t: "Platform Infrastructure",
       d: "End-to-end legal, bidding, and title-transfer protocols managed by our dedicated institutional desk.",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
+      img: infrastructureImg,
       icon: <Globe2 size={24} />,
       color: "navy"
     }
   ];
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
+    <section id="platform" className="section-padding bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-24">
           <motion.span 
@@ -261,7 +270,7 @@ const SuccessGrid = () => {
   };
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
+    <section id="how-it-works" className="section-padding bg-white overflow-hidden">
       <motion.div 
         variants={container}
         initial="hidden"
@@ -288,7 +297,8 @@ const SuccessGrid = () => {
             </div>
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group">
               <img src={prop1} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Properties" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-40"></div>
+
               <div className="absolute bottom-6 left-6 right-6">
                  <h4 className="text-white font-bold text-xl drop-shadow-md">Tailored Solutions</h4>
                  <span className="text-white/60 text-[10px] font-bold uppercase tracking-widest">Innovative Strategies</span>
@@ -299,8 +309,9 @@ const SuccessGrid = () => {
           {/* Middle Column */}
           <motion.div variants={item} className="md:col-span-1 space-y-6">
             <div className="aspect-[3/5] rounded-3xl overflow-hidden shadow-2xl relative group">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Consulting" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70"></div>
+              <img src={hero2} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Consulting" />
+                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-40"></div>
+
               <div className="absolute bottom-10 left-8 right-8">
                  <h4 className="text-white text-3xl font-bold mb-2 drop-shadow-lg font-serif">Insightful Consulting</h4>
                  <span className="bg-brand-gold text-brand-navy text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-black shadow-lg">Strategic Investment</span>
@@ -324,7 +335,7 @@ const SuccessGrid = () => {
               <img src={prop2} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Guidance" />
             </div>
             <div className="aspect-[3/5] rounded-3xl overflow-hidden shadow-2xl relative group">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Expert" />
+              <img src={hero3} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Expert" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70"></div>
               <div className="absolute bottom-10 left-8 right-8">
                  <h4 className="text-white text-3xl font-bold mb-2 drop-shadow-lg font-serif">Expert Guidance</h4>
@@ -372,9 +383,12 @@ const InvestorEvents = () => {
   ];
 
   return (
-    <section className="section-padding bg-brand-navy text-white overflow-hidden relative">
-      <div className="absolute inset-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center bg-fixed"></div>
-      <div className="absolute inset-0 bg-brand-navy/40"></div>
+    <section id="events" className="section-padding bg-[#0a1128] text-white overflow-hidden relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-90"
+        style={{ backgroundImage: `url(${eventImg})` }}
+      ></div>
+      <div className="absolute inset-0 bg-[#0a1128]/30"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="text-center mb-24">
@@ -398,12 +412,12 @@ const InvestorEvents = () => {
 
 const Benefits = () => {
   const coreBenefits = [
-    { t: "1000+ Premium Properties at 20-50% Discount", d: "Largest curated NLCT portfolio in India with value over ₹5,000 crores.", icon: <Building2 className="text-brand-gold" size={32} />, img: hero1 },
+    { t: "1000 plus Premium Properties at 20 to 50 percent Discount", d: "Largest curated NLCT portfolio in India with value over INR 5000 crores.", icon: <Building2 className="text-brand-gold" size={32} />, img: hero1 },
     { t: "Dedicated Personal Agent - Your Property Scout", d: "Expert scout familiar with your budget and goals manages your journey.", icon: <Users2 className="text-brand-gold" size={32} />, img: agentImg },
-    { t: "Expert Legal Support & Compliance", d: "Senior advocates handling document verification and 12-month warranties.", icon: <Landmark className="text-brand-gold" size={32} />, img: legalImg },
+    { t: "Expert Legal Support and Compliance", d: "Senior advocates handling document verification and 12 month warranties.", icon: <Landmark className="text-brand-gold" size={32} />, img: legalImg },
     { t: "Quarterly Investor Events (4 Per Year)", d: "Networking designed for serious investors. Spring, Mid-Year, Portfolio, Gala.", icon: <Calendar className="text-brand-gold" size={32} />, img: eventImg },
     { t: "Free Lifetime Selling Services", d: "Sell properties purchased through us at zero commission, forever.", icon: <ArrowUpRight className="text-brand-gold" size={32} />, img: aboutImg },
-    { t: "Verified Buyers & Sellers Platform", d: "Controlled platform for serious investors. No casual browsers.", icon: <ShieldCheck className="text-brand-gold" size={32} />, img: prop1 },
+    { t: "Verified Buyers and Sellers Platform", d: "Controlled platform for serious investors. No casual browsers.", icon: <ShieldCheck className="text-brand-gold" size={32} />, img: prop1 },
     { t: "Transparent Auction Process", d: "Complete clarity, bidding strategy consultation, and filling management.", icon: <Gavel className="text-brand-gold" size={32} />, img: prop2 },
     { t: "Stress-Free Property Handover", d: "From win to possession, we handle registration and inspection.", icon: <Handshake className="text-brand-gold" size={32} />, img: agentImg },
     { t: "Investment Insights & Analysis", d: "Comprehensive research achieving 15-25% average member ROI.", icon: <AreaChart className="text-brand-gold" size={32} />, img: prop3 }
@@ -434,8 +448,8 @@ const Benefits = () => {
           >
             {/* Background Image */}
             <div className="absolute inset-0">
-               <img src={b.img} className="w-full h-full object-cover opacity-10 grayscale group-hover:scale-110 group-hover:opacity-20 group-hover:grayscale-0 transition-all duration-1000" alt={b.t} />
-               <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] group-hover:bg-brand-navy/80 transition-colors duration-700"></div>
+               <img src={b.img} className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-1000" alt={b.t} />
+               <div className="absolute inset-0 bg-white/5 group-hover:bg-brand-navy/80 transition-colors duration-700"></div>
             </div>
 
             <div className="relative p-12 h-full flex flex-col justify-between z-10">
@@ -456,12 +470,12 @@ const Benefits = () => {
 
 const EnhancedPortfolio = () => {
   const properties = [
-    { t: "Trump Tower 2", l: "Sector 69, SPR Road, Gurgaon", p: "₹9.2 Cr", img: prop1, d: "View verified property details, pricing, and location insights." },
-    { t: "M3M Jacob & Co Noida", l: "At Sector 94, Noida", p: "₹7.5 Cr", img: prop2, d: "View verified property details, pricing, and location insights." },
-    { t: "M3M Paragon 57", l: "Sector 57, Gurugram", p: "₹1.2 Cr", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1035&auto=format&fit=crop", d: "View verified property details, pricing, and location insights." },
-    { t: "Smart World Orchard Street", l: "Sector 61, Gurugram", p: "₹2.5 Cr", img: prop3, d: "View verified property details, pricing, and location insights." },
-    { t: "Smart World One DXP Street", l: "Sector 113, Gurugram", p: "₹2.5 Cr", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", d: "View verified property details, pricing, and location insights." },
-    { t: "Elan The Mark", l: "Sector 106, Gurugram", p: "₹1.91 Cr", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop", d: "View verified property details, pricing, and location insights." }
+    { t: "Trump Tower 2", l: "Sector 69, SPR Road, Gurgaon", p: "INR 9.2 Cr", img: prop1, d: "View verified property details, pricing, and location insights." },
+    { t: "M3M Jacob & Co Noida", l: "At Sector 94, Noida", p: "INR 7.5 Cr", img: prop2, d: "View verified property details, pricing, and location insights." },
+    { t: "M3M Paragon 57", l: "Sector 57, Gurugram", p: "INR 1.2 Cr", img: prop3, d: "View verified property details, pricing, and location insights." },
+    { t: "Smart World Orchard Street", l: "Sector 61, Gurugram", p: "INR 2.5 Cr", img: prop1, d: "View verified property details, pricing, and location insights." },
+    { t: "Smart World One DXP Street", l: "Sector 113, Gurugram", p: "INR 2.5 Cr", img: hero2, d: "View verified property details, pricing, and location insights." },
+    { t: "Elan The Mark", l: "Sector 106, Gurugram", p: "INR 1.91 Cr", img: hero3, d: "View verified property details, pricing, and location insights." }
   ];
 
   return (
@@ -511,7 +525,7 @@ const MarketInsights = () => (
       >
         <div>
            <p className="text-zinc-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-4">Market Insights</p>
-           <h2 className="text-4xl lg:text-6xl font-serif font-black text-brand-dark max-w-2xl leading-[1.1]">Expert Perspectives & <br/>Luxury Real Estate Trends</h2>
+           <h2 className="text-4xl lg:text-6xl font-serif font-black text-brand-dark max-w-2xl leading-[1.1]">Expert Perspectives and <br/>Luxury Real Estate Trends</h2>
         </div>
         <Link to="/insights" className="px-8 py-3 bg-brand-navy text-white rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-xl">
            <span>View All Insights</span>
@@ -529,7 +543,7 @@ const MarketInsights = () => (
             className="lg:col-span-2 bg-white rounded-[40px] overflow-hidden border border-zinc-100 shadow-xl group"
          >
             <div className="aspect-[16/8] overflow-hidden">
-               <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Legal" />
+               <img src={legalMainImg} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Legal" />
             </div>
             <div className="p-12">
                <span className="bg-brand-dark text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-8 inline-block">Must Read</span>
@@ -541,9 +555,9 @@ const MarketInsights = () => (
          {/* Secondary Articles List */}
          <div className="flex flex-col gap-8">
             {[
-              { t: "Sector 103 Gurgaon Property Guide...", img: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop" },
-              { t: "How to Choose the Best Broker Fir...", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop" },
-              { t: "2BHK vs 3BHK Investment in Gurga...", img: "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=2070&auto=format&fit=crop" }
+              { t: "Sector 103 Gurgaon Property Guide...", img: hero4 },
+              { t: "How to Choose the Best Broker Fir...", img: institutionalImg },
+              { t: "2BHK vs 3BHK Investment in Gurga...", img: analyticsImg }
             ].map((art, i) => (
               <motion.div 
                 key={i} 
@@ -577,10 +591,10 @@ const AboutConsultancy = () => (
           transition={{ duration: 0.8 }}
           className="relative"
         >
-           <p className="text-zinc-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-6">About Oak N Stone Inc.</p>
+           <p className="text-zinc-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-6">About Our Consultancy</p>
            <h2 className="text-5xl lg:text-7xl font-serif font-black text-brand-dark mb-10 tracking-tighter leading-[0.95]">Leading Real Estate <br/>Consultancy In <br/><span className="text-brand-gold italic">Gurgaon.</span></h2>
            <p className="text-zinc-500 text-sm leading-[1.8] font-medium mb-12 max-w-xl">
-             Oak N Stone Inc. is a premier real estate consultancy in Gurgaon with 200+ professionals specializing in luxury residential and commercial properties. Established in 2018 and RERA registered, we serve clients across Sector 67, Golf Course Road, Dwarka Expressway, DLF Phases, and all major Gurgaon locations. Our comprehensive services include property buying and selling consultation, investment advisory, commercial leasing, NRI property services, and legal documentation support.
+             Our firm is a premier real estate consultancy in Gurgaon with 200 plus professionals specializing in luxury residential and commercial properties Established in 2018 and RERA registered we serve clients across Sector 67 Golf Course Road Dwarka Expressway DLF Phases and all major Gurgaon locations Our comprehensive services include property buying and selling consultation investment advisory commercial leasing NRI property services and legal documentation support
            </p>
            <button className="px-10 py-4 bg-brand-dark text-white rounded-lg flex items-center gap-4 text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-brand-navy transition-all shadow-2xl group">
               <span>Discover More</span>
@@ -595,7 +609,7 @@ const AboutConsultancy = () => (
           className="relative"
         >
            <div className="aspect-square rounded-[60px] overflow-hidden shadow-3xl">
-              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Interior" />
+              <img src={aboutImg} className="w-full h-full object-cover" alt="Interior" />
            </div>
            {/* Floating Badge */}
            <motion.div 
@@ -617,13 +631,16 @@ const AboutConsultancy = () => (
 );
 
 const TestimonialSection = () => (
-  <section className="py-40 relative bg-brand-navy overflow-hidden">
-     <div className="absolute inset-0 opacity-60 bg-[url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
-     <div className="absolute inset-0 bg-brand-navy/40"></div>
+  <section className="py-40 relative bg-[#0a1128] overflow-hidden">
+     <div 
+       className="absolute inset-0 bg-cover bg-center bg-fixed opacity-95"
+       style={{ backgroundImage: `url(${hero1})` }}
+     ></div>
+     <div className="absolute inset-0 bg-[#0a1128]/20"></div>
      
      <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
         <p className="text-white text-2xl md:text-3xl font-bold leading-relaxed mb-12 italic drop-shadow-lg">
-           "I was completely lost when I started looking for a property in Gurgaon. My budget was tight, and I didn't know which sectors were actually good. The PremiumLand team didn't just show me random properties—they sat with me, understood my goals, and found me a perfect asset at 30% below market price."
+           "I was completely lost when I started looking for a property in Gurgaon. My budget was tight, and I didn't know which sectors were actually good. The PremiumLand team didn't just show me random properties - they sat with me, understood my goals, and found me a perfect asset at 30% below market price."
         </p>
         <div className="flex items-center justify-center gap-4">
            <div className="w-14 h-14 rounded-full bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-gold font-bold text-lg shadow-2xl">PV</div>
@@ -640,11 +657,11 @@ const TrustMetrics = () => (
   <section className="py-24 bg-white">
     <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12 text-center">
         {[
-          { v: "1000+", l: "Properties" },
-          { v: "₹5K Cr+", l: "Portfolio" },
-          { v: "800+", l: "Deals Done" },
-          { v: "98%", l: "Satisfied" },
-          { v: "15-25%", l: "Avg ROI" }
+          { v: "1000 plus", l: "Properties" },
+          { v: "INR 5000 Crores plus", l: "Portfolio" },
+          { v: "800 plus", l: "Deals Done" },
+          { v: "98 percent", l: "Satisfied" },
+          { v: "15 to 25 percent", l: "Avg ROI" }
         ].map((m, i) => (
           <div key={i} className="flex flex-col gap-2">
             <span className="text-5xl font-black text-brand-navy transition-colors hover:text-brand-gold">{m.v}</span>
@@ -671,9 +688,12 @@ const Home = () => {
       <TestimonialSection />
       <TrustMetrics />
       
-      <section className="section-padding bg-brand-navy text-white text-center rounded-t-[100px] mt-24 relative overflow-hidden">
-         <div className="absolute inset-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
-         <div className="absolute inset-0 bg-brand-navy/60"></div>
+      <section className="section-padding bg-[#0a1128] text-white text-center rounded-t-[100px] mt-24 relative overflow-hidden">
+         <div 
+           className="absolute inset-0 bg-cover bg-center bg-fixed opacity-95"
+           style={{ backgroundImage: `url(${hero4})` }}
+         ></div>
+         <div className="absolute inset-0 bg-[#0a1128]/20"></div>
          
          <div className="max-w-4xl mx-auto px-6 relative z-10">
             <h3 className="text-5xl lg:text-7xl font-bold mb-12 italic text-white drop-shadow-2xl">Join a Private Network Built for Serious Investors</h3>

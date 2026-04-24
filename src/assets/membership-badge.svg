@@ -1,0 +1,29 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#0A1128"/>
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A059" />
+      <stop offset="50%" stop-color="#F9E0A2" />
+      <stop offset="100%" stop-color="#C5A059" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <circle cx="400" cy="400" r="300" stroke="url(#goldGradient)" stroke-width="2" opacity="0.2"/>
+  <circle cx="400" cy="400" r="250" stroke="url(#goldGradient)" stroke-width="1" opacity="0.1"/>
+  
+  <path d="M400 150L600 250V550L400 650L200 550V250L400 150Z" stroke="url(#goldGradient)" stroke-width="4" filter="url(#glow)"/>
+  
+  <path d="M400 250L530 315V485L400 550L270 485V315L400 250Z" fill="url(#goldGradient)" opacity="0.1"/>
+  
+  <path d="M400 320L450 400L400 480L350 400L400 320Z" fill="url(#goldGradient)"/>
+  <path d="M400 320L480 400L400 480L320 400L400 320Z" stroke="url(#goldGradient)" stroke-width="2" opacity="0.5"/>
+  
+  <text x="400" y="720" text-anchor="middle" fill="url(#goldGradient)" style="font-family: Arial; font-weight: 900; letter-spacing: 15px; text-transform: uppercase; font-size: 24px;">VAULT ELITE</text>
+  
+  <line x1="200" y1="400" x2="100" y2="400" stroke="url(#goldGradient)" stroke-width="1" opacity="0.3"/>
+  <line x1="600" y1="400" x2="700" y2="400" stroke="url(#goldGradient)" stroke-width="1" opacity="0.3"/>
+</svg>

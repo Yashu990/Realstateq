@@ -1,37 +1,33 @@
-# Project Update Brief - RealStateWeb
-
-This document summarizes the technical and design changes implemented to resolve the build errors and enhance the visual clarity of the landing page.
-
-## 1. Technical Fixes (Tailwind CSS v4 & Vite)
-- **Compiler Crash Resolution**: Fixed a critical build error caused by incorrect `@import` order in `index.css`. In Tailwind v4, `@import "tailwindcss"` must come after third-party imports like Google Fonts.
-- **Theme Configuration**: Added missing theme tokens (`--shadow-3xl`, `--color-brand-teal`) to the `@theme` block in `index.css` to prevent `@apply` errors.
-- **Vite Plugin Order**: Reordered plugins in `vite.config.js` to ensure Tailwind processes assets before React transformations.
-
-## 2. Visual Clarity & "Clear" Backgrounds
-The primary goal was to make background images more visible ("clearer") while ensuring text remains readable.
-
-- **Hero Section**: 
-    - Reduced the dark overlay opacity from **60% to 30%**.
-- **Stats Banner**: 
-    - Increased image visibility from **20% to 50%**.
-    - Lightened the dark gradient overlay.
-- **Investor Events Section**: 
-    - Added a new background image (Networking/Event themed).
-    - Set visibility to **50%** with a light overlay.
-    - Added `backdrop-blur-sm` to event cards for better depth.
-- **Testimonial Section**: 
-    - Increased background image opacity to **60%**.
-    - Reduced the dark overlay from **80% to 40%**.
-- **Final CTA Section**: 
-    - Added a luxury city skyline background image with **50%** visibility.
-
-## 3. Readability & Contrast
-- **Invisible Headers Fixed**: Headers that were previously dark navy on a navy background were changed to `text-white` for instant visibility.
-- **Text Shadows**: Implemented `drop-shadow` on major headings and testimonial text to maintain crisp readability against the clearer, brighter background images.
-- **Secondary Text**: Adjusted secondary descriptions from low-contrast `white/40` to more readable `zinc-300` or `white/60`.
-
-## 4. UI Simplification
-- Reverted experimental icons and extra text spans to maintain the original minimal and professional design of the testimonial and events sections, focusing purely on contrast and visibility.
-
----
-**Status**: Build error resolved. UI visibility and background clarity optimized.
+FREQUENTLY ASKED QUESTIONS - UPDATED
+About Properties & Portfolio
+Q: How many properties do you have? Are they 20-50% below market?
+A: We maintain a curated portfolio of 1000+ premium NLCT properties with a combined value exceeding ₹5,000 crores. Every property in our portfolio is listed at 20-50% below current market value. This discount is possible because NLCT properties come from court-supervised auctions where prices are set through competitive bidding rather than traditional market negotiations. Your membership fee could be earned back many times over through the acquisition discounts alone.
+Q: Why are NLCT properties so much cheaper than market?
+A: NLCT (Non-Litigious Collateral Transfer) properties are acquired through court-supervised legal auctions, resulting in prices set through competitive bidding rather than standard market negotiations. These are primarily:  • Bank recovery properties (debt default auctions) • Government disposals (administrative assets) • Court-ordered asset sales • Secured creditor auctions  The court-supervised process ensures transparency and competitive pricing, often resulting in 20-50% discounts compared to equivalent open-market properties. This discount reflects the auction mechanism, not any deficiency in the property itself.
+Q: What types of properties are available?
+A: Our 1000+ property portfolio includes:  Residential: • Apartments (1-4 BHK) • Villas and independent houses • Residential plots • Row houses  Commercial: • Office spaces (1-10,000+ sq ft) • Retail shops and malls • Warehouses and industrial • Mixed-use properties  Agricultural: • Farm land • Orchards and plantations • Agricultural estates  Locations: Pan-India including Gurgaon, Noida, Delhi, Bangalore, Mumbai, Hyderabad, Pune, Chennai, and many other cities
+About Dedicated Agent Services
+Q: What is a dedicated personal agent? How does it work?
+A: Your dedicated personal agent is a PremiumLand professional assigned exclusively to you. Here's how it works:  Initial Meeting: • Comprehensive consultation about your investment goals • Budget range and property preferences • Risk tolerance and timeline • Long-term strategy (buy-and-hold, rental, quick flip, etc.)  Ongoing Services: • Regular property recommendations from our 1000+ portfolio • Market updates relevant to your interests • Alert system for new listings matching your criteria • Quarterly check-ins and goal reviews • Direct hotline access for questions  Transaction Support: • Guidance through due diligence • Bidding strategy consultation • Post-auction support • Selling assistance when ready  Benefit: Instead of randomly browsing properties, you get expert guidance tailored to your specific investment profile. Your agent knows your goals intimately and proactively finds opportunities matching your criteria.
+Q: Can I change my dedicated agent?
+A: Yes. While we carefully match members with agents based on expertise and personality fit, you can request a change if you don't feel aligned. Simply contact our member support team and we'll pair you with a different agent whose expertise better matches your needs.
+About Quarterly Events
+Q: Are the quarterly events mandatory?
+A: No, they're completely optional. However, we strongly encourage attendance because:  • Networking with 800+ serious investors is invaluable • Learn strategies from successful members • Meet expert speakers and advisors • Discover exceptional properties featured at events • Build professional friendships and potentially find co-investors • Get exclusive access to information and opportunities  For members who cannot attend in person, we offer virtual participation options.
+Q: What are the costs for attending quarterly events?
+A: Attendance is completely FREE for all members. All costs are included in your membership:  • Event registration: Covered • Meals and refreshments: Covered • Venue and setup: Covered • Expert speaker fees: Covered • Materials and recordings: Covered  Only cost might be travel and accommodation if attending from another city, which is entirely optional.
+Q: Can I bring guests to events?
+A: Yes, each member can bring one guest to any quarterly event. This is a great way to introduce friends or family members to the platform and give them a taste of the PremiumLand community.
+About Free Selling Services
+Q: What does 'free lifetime selling' really mean?
+A: It's simple: When you want to sell any property you purchased through PremiumLand Auctions, we provide all selling services completely free. Here's what's included:  • Property listing on our verified buyer platform • Professional property marketing • Buyer verification and qualification • Negotiation support • Documentation preparation • Legal review of sale agreement • Transaction management • Registration and transfer closure  What it costs: ₹0. Zero commission. Zero fees. Forever.  How it works: We connect you directly with serious, verified buyers from our platform. No middlemen. No agents. Just qualified buyers ready to purchase.
+Q: What if I want to sell a property several years after purchase?
+A: Free selling applies to any property bought through us, whenever you decide to sell—whether it's 1 year, 5 years, or 20 years later. There's no time limit on this benefit.
+Q: What if I sell at a loss—is the selling still free?
+A: Yes, selling is always free regardless of profit or loss. We support your exit for any reason at any time with zero charges. It's part of our commitment to being your lifetime real estate partner.
+About Platform & Buyer/Seller Network
+Q: How is your verified buyer/seller network different from traditional real estate?
+A: Major differences:  Traditional Real Estate: • Multiple agents and brokers (2-5% commissions) • Slow communication with information silos • Potential miscommunications between parties • No single point of accountability • Limited seller options (only one agent's network) • Buyer-seller conflicts over pricing  PremiumLand Platform: • Single verified buyer/seller network • Serious, qualified members only • Direct communication facilitated by our team • Central accountability (we're responsible for every step) • Direct access to large verified buyer network • Fair pricing (market-based, not commission-driven) • Zero middlemen taking cuts • Complete transparency and support  Result: Faster sales, better deals, lower costs, happier parties.
+About Membership & Refund
+Q: I'm still not convinced about paying ₹1 lakh upfront. What's the guarantee?
+A: We offer multiple guarantees:  1. 30-Day Money-Back Guarantee If you're not satisfied within 30 days of joining for any reason, you get full refund. No questions asked. No conditions.  2. Membership Fee Refund with First Purchase When you successfully acquire any property through us and take possession, your entire ₹1 lakh membership fee is refunded.  3. Immediate Value From day one, you get: • Access to 1000+ properties at 20-50% discount • Dedicated agent (worth ₹300,000+ if hired privately) • Expert legal consultations (worth ₹200,000+ in legal fees) • Access to quarterly events (worth ₹100,000+ alone)  The membership pays for itself through the property discounts alone, multiple times over.  4. Track Record • 800+ successful acquisitions • 98% member satisfaction • Zero unresolved complaints • Established 15+ years in business

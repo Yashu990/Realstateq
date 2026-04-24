@@ -1,52 +1,107 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Activity, Gavel, FileText, Home, LifeBuoy, TrendingUp, ShieldCheck, ArrowRight, Zap } from 'lucide-react';
+import { 
+  Gavel, Scale, ShieldCheck, Building2, 
+  Search, FileSearch, HardHat, Landmark,
+  Briefcase, Activity, CheckCircle2, 
+  ArrowRight, ShieldAlert, Zap
+} from 'lucide-react';
+
+// Asset Imports
+import heroImg from '../assets/hero3.png';
+import acquisitionImg from '../assets/prop1.png';
+import managementImg from '../assets/off.png';
 
 const Services = () => {
-  const steps = [
-    { title: "Identification", desc: "Data-led discovery of undervalued institutional land blocks crossing Gurgaon and NCR corridors.", icon: <Search size={28} /> },
-    { title: "Pre-Vetting", desc: "Rigorous legal and valuation benchmarking before listing in the private portal.", icon: <Activity size={28} /> },
-    { title: "Bidding Roadmap", desc: "Strategic bidding frameworks designed for maximum discount and high closure certainty.", icon: <Gavel size={28} /> },
-    { title: "Transaction Loop", desc: "Handling all complex inter-bank and court coordination for members during acquisition.", icon: <FileText size={28} /> },
-    { title: "Handover Control", desc: "Smooth physical possession management and corporate compliance transfer protocol.", icon: <Home size={28} /> },
-    { title: "Lifecycle Strategy", desc: "Post-purchase advisory, resale network connectivity, and long-term tax planning.", icon: <LifeBuoy size={28} /> }
+  const protocols = [
+    {
+      title: "Judicial Acquisition Protocol",
+      desc: "End to end management of the bidding and acquisition process within NCLT and judicial auction frameworks including strategic valuation and bid positioning",
+      icon: <Gavel size={32} />,
+      points: ["Strategic Valuation", "NCLT Bid Management", "Judicial Liaison"]
+    },
+    {
+      title: "Title Cleansing Mandate",
+      desc: "Comprehensive legal audit and neutralization of historical debts encumbrances and liabilities to ensure an absolute and unencumbered title transfer",
+      icon: <Scale size={32} />,
+      points: ["Debt Neutralization", "Liability Audits", "Clearance Certificates"]
+    },
+    {
+      title: "Secured Possession Mandate",
+      desc: "Physical asset securitization and possession transition management including technical audits and infrastructure verification post acquisition",
+      icon: <ShieldCheck size={32} />,
+      points: ["Physical Possession", "Technical Audits", "Secure Transition"]
+    }
+  ];
+
+  const desks = [
+    {
+      name: "The HNI Private Desk",
+      desc: "Bespoke acquisition mandates for high value individuals focused on luxury residential and private estates",
+      icon: <Briefcase size={24} />
+    },
+    {
+      name: "The Institutional Desk",
+      desc: "Bulk land banking and commercial portfolio management for corporate entities and real estate funds",
+      icon: <Landmark size={24} />
+    }
   ];
 
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="pt-48 pb-24 border-b border-zinc-50 relative overflow-hidden bg-zinc-50/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-3 mb-8 bg-brand-teal/5 px-5 py-2.5 rounded-full border border-brand-teal/10">
-               <div className="w-2.5 h-2.5 rounded-full bg-brand-teal"></div>
-               <span className="text-[11px] font-black tracking-[0.3em] uppercase text-brand-teal">Institutional Capacity</span>
-            </div>
-            <h1 className="text-7xl lg:text-[10rem] lg:leading-[0.85] mb-10 font-serif font-black italic tracking-tighter text-brand-dark">The Execution <br/>Cycle.</h1>
-            <p className="text-2xl text-zinc-400 font-light leading-relaxed max-w-2xl">
-               We remove structural complexity, not institutional control. From identification to final sovereign possession—we execute the entire lifecycle.
-            </p>
-          </div>
+      {/* CINEMATIC HERO - EXPANDED */}
+      <section className="relative h-[85vh] flex items-center overflow-hidden bg-[#0a1128]">
+        <div className="absolute inset-0 z-0">
+          <img src={heroImg} className="w-full h-full object-cover opacity-40 scale-110" alt="Services" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/80 via-transparent to-white"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full text-center lg:text-left">
+           <motion.div 
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             className="max-w-4xl"
+           >
+             <span className="text-brand-gold text-[10px] font-black uppercase tracking-[0.6em] mb-8 block">Operational Mandates</span>
+             <h1 className="text-6xl lg:text-9xl font-black text-white mb-10 tracking-tighter leading-[0.8] uppercase">
+               Strategic <br />Protocols.
+             </h1>
+             <p className="text-zinc-300 text-lg md:text-xl leading-relaxed font-medium max-w-xl mx-auto lg:mx-0">
+               Sophisticated legal and technical frameworks designed to de risk judicial asset acquisitions and maximize capital efficiency
+             </p>
+           </motion.div>
         </div>
       </section>
 
-      {/* Process Grid */}
-      <section className="section-padding bg-white relative">
+      {/* CORE PROTOCOL GRID */}
+      <section className="section-padding bg-white relative -mt-20 z-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-              {steps.map((step, i) => (
+           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+              {protocols.map((p, i) => (
                 <motion.div 
-                  key={i} 
-                  whileHover={{ y: -10 }}
-                  className="bg-white p-14 rounded-[60px] border border-zinc-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.03)] hover:shadow-[0_50px_100px_-20px_rgba(0,71,67,0.1)] group transition-all duration-700 hover:border-brand-teal/10"
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white p-12 rounded-[50px] shadow-3xl border border-zinc-50 hover:border-brand-gold/20 transition-all duration-500 group"
                 >
-                   <div className="w-20 h-20 rounded-[30px] bg-brand-offwhite flex items-center justify-center text-brand-teal mb-12 group-hover:bg-brand-teal group-hover:text-white group-hover:rotate-6 transition-all duration-500 shadow-sm ring-4 ring-zinc-50">
-                      {step.icon}
+                   <div className="w-20 h-20 bg-brand-navy text-white rounded-3xl flex items-center justify-center mb-12 group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors shadow-2xl">
+                      {p.icon}
                    </div>
-                   <h3 className="text-3xl font-bold mb-6 font-serif tracking-tight text-brand-dark">{step.title}</h3>
-                   <p className="text-zinc-500 text-base leading-relaxed font-medium mb-10 opacity-70 group-hover:opacity-100 transition-opacity">{step.desc}</p>
-                   <div className="w-10 h-10 rounded-full border border-zinc-100 flex items-center justify-center text-zinc-300 group-hover:border-brand-teal group-hover:text-brand-teal transition-all">
-                      <ArrowRight size={18} />
+                   <h3 className="text-3xl font-black text-brand-navy uppercase tracking-tighter mb-8 leading-none">
+                      {p.title}
+                   </h3>
+                   <p className="text-zinc-500 font-medium leading-relaxed mb-10 text-base">
+                      {p.desc}
+                   </p>
+                   <div className="space-y-4">
+                      {p.points.map((point, idx) => (
+                        <div key={idx} className="flex items-center gap-4">
+                           <CheckCircle2 size={16} className="text-brand-gold" />
+                           <span className="text-[10px] font-black uppercase tracking-widest text-brand-navy opacity-60">{point}</span>
+                        </div>
+                      ))}
                    </div>
                 </motion.div>
               ))}
@@ -54,47 +109,96 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Advisory Partnership Section */}
-      <section className="section-padding bg-brand-dark text-white rounded-t-[100px] mt-20 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-[300px] bg-gradient-to-b from-black/20 to-transparent"></div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-32 items-center relative z-10 py-10">
-           <div>
-              <span className="text-brand-gold text-xs font-black tracking-[0.5em] mb-8 block uppercase">Strategic Alliance</span>
-              <h2 className="text-5xl lg:text-7xl font-serif font-black mb-12 leading-tight italic tracking-tighter">Bespoke <br/>Portfolio Design.</h2>
-              <p className="text-xl lg:text-2xl text-white/50 mb-14 leading-relaxed font-light">
-                 Every institutional investor operates on unique mandates. We design specific acquisition models aligned with your liquidity profile and ROI benchmarks.
-              </p>
-              <div className="flex flex-wrap gap-6 scale-110 origin-left">
-                 <button className="btn-pill !bg-brand-teal hover:!bg-white hover:!text-brand-teal !px-12 !py-6 font-black shadow-2xl">
-                    Advisory Briefing
-                 </button>
-                 <button className="btn-pill !border-white/20 !text-white hover:!bg-white/10 !px-10 !py-6">
-                    ROI Framework 2024
-                 </button>
+      {/* SPECIALIZED DESKS */}
+      <section className="section-padding bg-zinc-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+           <div className="grid lg:grid-cols-12 gap-24 items-center">
+              <div className="lg:col-span-5">
+                 <span className="text-brand-gold text-[10px] font-black uppercase tracking-[0.4em] mb-8 block">Targeted Mandates</span>
+                 <h2 className="text-4xl lg:text-7xl font-black text-brand-navy uppercase tracking-tighter mb-10 leading-none">
+                   Specialized <br />Desks.
+                 </h2>
+                 <p className="text-lg text-zinc-500 font-medium leading-relaxed mb-12">
+                   We operate two distinct institutional desks to serve the unique requirements of private wealth and corporate real estate funds
+                 </p>
+                 <div className="space-y-8">
+                    {desks.map((d, i) => (
+                      <div key={i} className="flex gap-8 items-start">
+                         <div className="w-12 h-12 rounded-xl bg-brand-navy text-white flex items-center justify-center shrink-0 shadow-xl">
+                            {d.icon}
+                         </div>
+                         <div>
+                            <h4 className="text-xl font-black text-brand-navy uppercase tracking-tight mb-2">{d.name}</h4>
+                            <p className="text-sm text-zinc-500 font-medium leading-relaxed">{d.desc}</p>
+                         </div>
+                      </div>
+                    ))}
+                 </div>
+              </div>
+              <div className="lg:col-span-7 relative">
+                 <div className="aspect-video rounded-[60px] overflow-hidden shadow-4xl relative z-10">
+                    <img src={acquisitionImg} className="w-full h-full object-cover" alt="HNI Desk" />
+                 </div>
+                 <div className="absolute -top-10 -right-10 w-48 h-48 bg-brand-gold rounded-full blur-[80px] opacity-20"></div>
               </div>
            </div>
+        </div>
+      </section>
+
+      {/* THE SECURE PATH - WORKFLOW */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+           <span className="text-brand-gold text-[10px] font-black uppercase tracking-[0.4em] mb-8 block uppercase">Mandate Lifecycle</span>
+           <h2 className="text-4xl lg:text-6xl font-black text-brand-navy uppercase tracking-tighter mb-24 leading-none">
+             The Secure <br />Acquisition Path.
+           </h2>
            
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:rotate-3">
+           <div className="grid md:grid-cols-4 gap-8 relative">
+              {/* Connector Line (Desktop Only) */}
+              <div className="hidden md:block absolute top-10 left-[10%] right-[10%] h-px bg-zinc-100 -z-0"></div>
+              
               {[
-                { v: "15-25%", l: "Target Strategic ROI", d: "Capitalizing on liquidation distress corridors." },
-                { v: "₹2,000 Cr", l: "Active Mandate Base", d: "Managing portfolios for institutional funds." }
+                { step: "Zero One", title: "Mandate Activation", icon: <Activity size={24} /> },
+                { step: "Zero Two", title: "Legal Liquidation", icon: <FileSearch size={24} /> },
+                { step: "Zero Three", title: "Judicial Bidding", icon: <Gavel size={24} /> },
+                { step: "Zero Four", title: "Possession Handover", icon: <CheckCircle2 size={24} /> }
               ].map((s, i) => (
-                <motion.div 
-                  key={i} 
-                  whileHover={{ scale: 1.05 }}
-                  className="p-12 bg-white/5 rounded-[50px] border border-white/10 backdrop-blur-xl shadow-2xl text-center"
-                >
-                   <p className="text-5xl font-black text-brand-gold mb-4 leading-none">{s.v}</p>
-                   <p className="text-[10px] tracking-[0.3em] font-black uppercase text-white/50 mb-6">{s.l}</p>
-                   <p className="text-xs text-white/30 font-medium leading-relaxed">{s.d}</p>
-                </motion.div>
-              ))}
-              <div className="col-span-1 md:col-span-2 p-12 bg-brand-teal rounded-[50px] flex items-center gap-10 shadow-3xl shadow-brand-teal/20 border border-white/10">
-                <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20"><ShieldCheck size={40} className="text-white" strokeWidth={1.5} /></div>
-                <div>
-                   <h5 className="font-bold text-2xl tracking-tight mb-2">Sovereign Protection</h5>
-                   <p className="text-sm text-white/50 font-medium">Absolute zero physical friction guarantee during asset transition.</p>
+                <div key={i} className="relative z-10 bg-white group">
+                   <div className="w-20 h-20 bg-zinc-50 border border-zinc-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-brand-navy group-hover:text-white transition-all duration-500 shadow-lg">
+                      {s.icon}
+                   </div>
+                   <p className="text-brand-gold text-[8px] font-black tracking-[0.4em] uppercase mb-2">{s.step}</p>
+                   <h4 className="text-base font-black text-brand-navy uppercase tracking-tight">{s.title}</h4>
                 </div>
+              ))}
+           </div>
+        </div>
+      </section>
+
+      {/* FINAL CALL TO MANDATE - COMPACT VERSION */}
+      <section className="pb-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+           <div className="bg-[#0a1128] rounded-[40px] p-10 lg:p-16 overflow-hidden relative shadow-3xl text-white group border border-white/5">
+              <div className="max-w-3xl relative z-10">
+                 <div className="flex items-center gap-3 mb-8 text-brand-gold">
+                    <ShieldAlert size={20} />
+                    <span className="text-[10px] font-black tracking-[0.4em] uppercase">Confidential Institutional Mandate</span>
+                 </div>
+                 <h2 className="text-3xl lg:text-5xl font-black uppercase tracking-tight mb-8 leading-none">
+                   Initiate Your <br />Strategic <span className="text-brand-gold">Mandate.</span>
+                 </h2>
+                 <p className="text-zinc-400 text-base font-medium mb-10 leading-relaxed max-w-2xl">
+                   Engage our legal and technical team for a confidential discussion regarding your specific acquisition goals in the judicial real estate market
+                 </p>
+                 <div className="flex flex-wrap gap-4">
+                    <button className="px-10 py-5 bg-brand-gold text-brand-navy rounded-2xl font-black uppercase text-[9px] tracking-widest shadow-2xl hover:scale-105 transition-all flex items-center gap-3">
+                       <Zap size={16} />
+                       <span>Register Mandate</span>
+                    </button>
+                    <button className="px-10 py-5 border border-white/20 text-white rounded-2xl font-black uppercase text-[9px] tracking-widest hover:bg-white/10 transition-all">
+                       Corporate Deck
+                    </button>
+                 </div>
               </div>
            </div>
         </div>
