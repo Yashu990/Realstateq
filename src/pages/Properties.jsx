@@ -30,7 +30,7 @@ const Properties = () => {
     {
       id: 1,
       name: "M3M Luxury Penthouse",
-      location: "Sector Sixty Five Gurgaon",
+      location: "Sector Sixty Five NLCT",
       price: "INR 45000000",
       valuation: "INR 65000000",
       auction: "Scheduled October Twenty",
@@ -44,7 +44,7 @@ const Properties = () => {
     {
       id: 2,
       name: "Trump Tower Residence",
-      location: "Sector Sixty Nine Gurgaon",
+      location: "Sector Sixty Nine NLCT",
       price: "INR 85000000",
       valuation: "INR 110000000",
       auction: "Scheduled October Twenty Five",
@@ -58,7 +58,7 @@ const Properties = () => {
     {
       id: 3,
       name: "Global Tech Park Campus",
-      location: "Cyber City Gurgaon",
+      location: "Cyber City NLCT",
       price: "INR 250000000",
       valuation: "INR 350000000",
       auction: "Scheduled November Five",
@@ -100,7 +100,7 @@ const Properties = () => {
     {
       id: 6,
       name: "Prime Retail Mall Block",
-      location: "MG Road Gurgaon",
+      location: "MG Road NLCT",
       price: "INR 95000000",
       valuation: "INR 135000000",
       auction: "Scheduled November Twenty Two",

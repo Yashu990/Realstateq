@@ -48,7 +48,7 @@ const FAQ = () => {
       },
       {
         q: "What types of properties are available",
-        a: "Our 1000 plus property portfolio includes residential apartments from 1 to 4 BHK villas and plots commercial office spaces from 1 to 10000 plus square feet retail shops and warehouses as well as agricultural estates across pan India locations including Gurgaon Noida Delhi Bangalore and Mumbai"
+        a: "Our 1000 plus property portfolio includes residential apartments from 1 to 4 BHK villas and plots commercial office spaces from 1 to 10000 plus square feet retail shops and warehouses as well as agricultural estates across pan India locations including NLCT Noida Delhi Bangalore and Mumbai"
       }
     ],
     "Agent Services": [
