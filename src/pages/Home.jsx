@@ -78,12 +78,12 @@ const Hero = () => {
             <Gem size={14} className="text-brand-gold" />
             <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Invitation-Only Platform</span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-10 leading-[0.9] tracking-tighter uppercase">
-            Access India <br />One Thousand <span className="text-brand-gold">Plus</span> Premium <br />NLCT Assets.
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-10 leading-[1] tracking-tighter uppercase">
+            Access India's <br />1000<span className="text-brand-gold">+</span> Premium <br />Institutional Assets.
           </h1>
 
-          <p className="text-base md:text-lg lg:text-xl font-medium text-zinc-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join our exclusive network connecting serious buyers with verified judicial assets Discover properties twenty to fifty percent below market valuation
+          <p className="text-base md:text-lg font-medium text-zinc-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            India's Premier NCLT Property Auction Platform with 1000+ properties at 20-50% below market value.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -304,7 +304,6 @@ const PlatformDifferentiation = () => {
         </div>
       </div>
 
-      {/* POPUP MODAL */}
       <AnimatePresence>
         {selectedCard && (
           <motion.div 
